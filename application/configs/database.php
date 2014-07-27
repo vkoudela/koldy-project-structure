@@ -12,7 +12,7 @@
  *   		protected static $connection = 'backup';
  *   	}
  * 
- * @link http://koldy.dev/docs/database/configuration
+ * @link http://koldy.net/docs/database/configuration
  */
 return array(
 

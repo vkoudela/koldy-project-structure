@@ -16,7 +16,7 @@
  *   		->...
  *         	->send();
  * 
- * @link http://koldy.dev/docs/mail
+ * @link http://koldy.net/docs/mail
  */
 return array(
 
@@ -24,7 +24,7 @@ return array(
 	/**
 	 * Driver for using internal mail() function
 	 * 
-	 * @link http://koldy.dev/docs/mail/mail
+	 * @link http://koldy.net/docs/mail/mail
 	 */
 	'default' => array(
 		'enabled' => true,
@@ -35,7 +35,7 @@ return array(
 	/**
 	 * PHPMailer configuration
 	 * 
-	 * @link http://koldy.dev/docs/mail/phpmailer
+	 * @link http://koldy.net/docs/mail/phpmailer
 	 */
 	'phpmailer' => array(
 		'enabled' => true,
@@ -56,7 +56,7 @@ return array(
 	 * This won't acutally send e-mail. It will just simulate sending by
 	 * printing log message. This is good in development environment.
 	 * 
-	 * @link http://koldy.dev/docs/mail/simulate
+	 * @link http://koldy.net/docs/mail/simulate
 	 */
 	'simulate' => array(
 		'enabled' => true,

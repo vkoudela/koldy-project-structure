@@ -5,7 +5,7 @@ return array(
 	 * The first defined cache driver is the default one. This one will be used
 	 * if you don't specify this key when calling Cache::driver()
 	 * 
-	 * @link http://koldy.dev/docs/cache/files#configuration
+	 * @link http://koldy.net/docs/cache/files#configuration
 	 */
 	'files' => array(
 		'enabled' => true,
@@ -21,7 +21,7 @@ return array(
 	 * This is example of some other cache driver that will store cached files
 	 * on some other location. Call this by using Cache::driver('tmp')
 	 * 
-	 * @link http://koldy.dev/docs/cache/files#configuration
+	 * @link http://koldy.net/docs/cache/files#configuration
 	 */
 	'tmp' => array(
 		'enabled' => true,
@@ -39,7 +39,7 @@ return array(
 	 * If you want to make this one default, then move this key on the top of this
 	 * file or call this driver with Cache::driver('nowhere')
 	 * 
-	 * @link http://koldy.dev/docs/cache/devnull
+	 * @link http://koldy.net/docs/cache/devnull
 	 */
 	'nowhere' => array(
 		'enabled' => true,

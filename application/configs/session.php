@@ -3,7 +3,7 @@
  * The session configuration. As you know, you may have only one session storage
  * and it needs to be defined here.
  * 
- * @link http://koldy.dev/docs/session#configuration
+ * @link http://koldy.net/docs/session#configuration
  */
 return array(
 
