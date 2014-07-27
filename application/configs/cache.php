@@ -1,0 +1,49 @@
+<?php
+
+return array(
+	/**
+	 * The first defined cache driver is the default one. This one will be used
+	 * if you don't specify this key when calling Cache::driver()
+	 * 
+	 * @link http://koldy.dev/docs/cache/files#configuration
+	 */
+	'files' => array(
+		'enabled' => true,
+		'driver_class' => '\Koldy\Cache\Driver\Files',
+
+		'options' => array(
+			'path' => null, // if null, then path is [storage]/cache
+			'default_duration' => 3600
+		)
+	),
+
+	/**
+	 * This is example of some other cache driver that will store cached files
+	 * on some other location. Call this by using Cache::driver('tmp')
+	 * 
+	 * @link http://koldy.dev/docs/cache/files#configuration
+	 */
+	'tmp' => array(
+		'enabled' => true,
+		'driver_class' => '\Koldy\Cache\Driver\Files',
+
+		'options' => array(
+			'path' => '/full/path/to/storage/tmp/',
+			'default_duration' => 10
+		)
+	),
+
+	/**
+	 * If you don't want to disable cache driver, but you still want to use it in
+	 * some simulations or simulated environment, then use DevNull type of driver.
+	 * If you want to make this one default, then move this key on the top of this
+	 * file or call this driver with Cache::driver('nowhere')
+	 * 
+	 * @link http://koldy.dev/docs/cache/devnull
+	 */
+	'nowhere' => array(
+		'enabled' => true,
+		'driver_class' => '\Koldy\Cache\Driver\DevNull'
+	)
+
+);
