@@ -129,7 +129,7 @@ return array(
 	 * The routing class to parse URIs and to generate links to resources and other pages
 	 * 
 	 * @var string
-	 * @link http://koldy.dev/docs/routes
+	 * @link http://koldy.net/docs/routes
 	 */
 	'routing_class' => '\Koldy\Application\Route\DefaultRoute',
 
@@ -139,7 +139,7 @@ return array(
 	 * the documentation for details.
 	 * 
 	 * @var array
-	 * @link http://koldy.dev/docs/routes
+	 * @link http://koldy.net/docs/routes
 	 */
 	'routing_options' => array(
 		'always_restful' => false
@@ -152,14 +152,14 @@ return array(
 	 * and the second one is used only when script is called in CLI environment.
 	 * 
 	 * @var array
-	 * @link http://koldy.dev/docs/log
+	 * @link http://koldy.net/docs/log
 	 */
 	'log' => array(
 
 		/**
 		 * The default writer to FILE - by default enabled only for regular HTTP requests
 		 * 
-		 * @link http://koldy.dev/docs/log/file
+		 * @link http://koldy.net/docs/log/file
 		 */
 		array(
 			'enabled' => (PHP_SAPI != 'cli'),
@@ -176,7 +176,7 @@ return array(
 		/**
 		 * Writer to console - prepared to work only in CLI environment
 		 * 
-		 * @link http://koldy.dev/docs/log/out
+		 * @link http://koldy.net/docs/log/out
 		 */
 		array(
 			'enabled' => (PHP_SAPI == 'cli'),
@@ -192,7 +192,7 @@ return array(
 		/**
 		 * Logging into database - disabled by default, but its here just for an example if you want to use it
 		 * 
-		 * @link http://koldy.dev/docs/log/db
+		 * @link http://koldy.net/docs/log/db
 		 */
 		array(
 			'enabled' => false,
