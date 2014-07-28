@@ -1,0 +1,13 @@
+# For Apache people, who can't or doesn't want to point their virtual host to
+# public/ folder - Fine, you can point your virtual host here, but this is not
+# recommended.
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^$ public/ [L]
+RewriteRule (.*) public/$1 [L]
+
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|disabled|sql)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>

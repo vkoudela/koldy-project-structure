@@ -11,12 +11,14 @@ if (PHP_SAPI != 'cli') {
 	exit(0);
 }
 
+
 /**
  * Define this global constant. This is for framework only, so don't
  * relay on this in the future.
  * @var boolean
  */
 define('KOLDY_CLI', true);
+
 
 /**
  * Continue like this is a normal script
