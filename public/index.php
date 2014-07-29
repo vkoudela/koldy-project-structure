@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * Initially, the index.php will work automatically if you place Koldy Framework
+ * in [your-project]/application/library/
+ */
+
+
+/**
  * Always, but *always* include the Application.php by including the full path
  * on the file system! If you know only the relative path, then resolve the
  * full path with realpath() function.

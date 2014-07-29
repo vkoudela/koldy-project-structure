@@ -17,6 +17,7 @@ return array(
 		)
 	),
 
+
 	/**
 	 * This is example of some other cache driver that will store cached files
 	 * on some other location. Call this by using Cache::driver('tmp')
@@ -32,6 +33,7 @@ return array(
 			'default_duration' => 10
 		)
 	),
+
 
 	/**
 	 * If you don't want to disable cache driver, but you still want to use it in
