@@ -4,6 +4,37 @@
  */
 return array(
 
+	/**
+	 * The site URL WITHOUT ending slash.
+	 *
+	 * If this is array, then framework will assume that you want to run this site
+	 * on multiple domains and thats cool, but there always has to be one primary
+	 * domain. So, if this is array, then the first defined domain will be
+	 * used as the main domain. This is the case if you run anything in CLI
+	 * environment - then domain can't be detected so the first one will be used.
+	 *
+	 * @var string|array
+	 * @example http://your-domain.com
+	 * @example array('http://your-domain.com', 'http://second-domain.com', 'http://something.your-domain.com')
+	 * @example array('http://your-domain.dev', 'http://your-domain.com')
+	 */
+	'site_url' => null,
+
+
+	/**
+	 * The CDN URL for resources - WITHOUT ending slash.
+	 *
+	 * Set null if you don't have any. I'm recommending that you always generate
+	 * your URLs to assets with Url::cdn() method even if you don't have any
+	 * CDN or separate domain for your assets. It won't hurt you, but one day,
+	 * if you get the separate server, then just update this config and voila!
+	 *
+	 * @var string
+	 * @example http://cdn.your-domain.com
+	 * @example http://static.your-domain.com/assets
+	 */
+	'cdn_url' => null,
+
 
 	/**
 	 * The application environment. Sometimes, developers might want to do specific
@@ -43,8 +74,7 @@ return array(
 
 
 	/**
-	 * The full path to public_html folder WITH ending slash. It is needed if
-	 * you want to store config files outside of public_html folder. If null,
+	 * The full path to public_html folder WITH ending slash. If null,
 	 * then it will be autodetected from SCRIPT_FILENAME
 	 * 
 	 * @var string
@@ -53,7 +83,7 @@ return array(
 
 
 	/**
-	 * The full path to storage folder that shouldn't be accessible with HTTP - WITH ending slash.
+	 * The full path to storage folder that shouldn't be accessible via HTTP - WITH ending slash.
 	 * If null, then it will be autodetected by assuming it is in the same
 	 * directory level as application_path
 	 * 
@@ -67,7 +97,7 @@ return array(
 	 * then define this array and fill it with the include paths you need
 	 * 
 	 * @var array
-	 * @example array('/var/lib/3rdparty/something', '/home/my/libs/SwiftMailer')
+	 * @example array('/var/lib/3rdparty/something', '/home/my/libs/PHPMailer')
 	 */
 	'additional_include_path' => null,
 
@@ -82,37 +112,6 @@ return array(
 	 * @example array('users','news')
 	 */
 	'auto_register_modules' => null,
-
-
-	/**
-	 * The CDN URL for resources - WITHOUT ending slash.
-	 * 
-	 * Set null if you don't have any. I'm recommending that you always generate
-	 * your URLs to assets with Url::cdn() method even if you don't have any
-	 * CDN or separate domain for your assets. It won't hurt you, but one day,
-	 * if you get the separate server, then just update this config and voila!
-	 * 
-	 * @var string
-	 * @example http://cdn.your-domain.com
-	 * @example http://static.your-domain.com/assets
-	 */
-	'cdn_url' => null,
-
-
-	/**
-	 * The site URL WITHOUT ending slash.
-	 * 
-	 * If this is array, then framework will assume that you want to run this site
-	 * on multiple domains and thats cool, but there always has to be one primary
-	 * domain. So, if this is array, then the first defined domain will be
-	 * used as the main domain. This is the case if you run anything in CLI
-	 * environment - then domain can't be detected so the first one will be used.
-	 * 
-	 * @var string|array
-	 * @example http://your-domain.com
-	 * @example array('http://your-domain.com', 'http://second-domain.com', 'http://something.your-domain.com')
-	 */
-	'site_url' => 'http://your-domain.com',
 
 
 	/**
@@ -169,7 +168,7 @@ return array(
 				'log' => array('debug', 'notice', 'info', 'warning', 'error', 'sql', 'exception'),
 				'email_on' => array('warning', 'error', 'exception'),
 				'email' => 'your@email.com',
-				'dump' => array('speed')
+				'dump' => array()
 			)
 		),
 

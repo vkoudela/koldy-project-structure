@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?= $this->title ?></title>
+	
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<div class="container">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="<?= Url::home() ?>"><?= Request::hostNameDomain() ?></a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="main-menu">
+					<ul class="nav navbar-nav">
+						<li<?= (Url::current() == Url::home() ? ' class="active"' : '') ?>><a href="<?= Url::home() ?>">Home</a></li>
+						<li<?= (Url::isController('tests') ? ' class="active"' : '') ?>><a href="<?= Url::href('tests', 'application') ?>">Configuration Tests</a></li>
+						<li><a href="<?= Url::href('tests', 'show-phpinfo') ?>">PHP Info</a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="http://koldy.net" target="_blank">Koldy.net</a></li>
+						<li><a href="http://koldy.net/docs" target="_blank">Koldy Docs</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<?= $this->render($this->page) ?>
+
+		<div class="well text-center">
+			<?= Request::hostNameDomain() ?> &copy; <?= date('Y') ?>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>

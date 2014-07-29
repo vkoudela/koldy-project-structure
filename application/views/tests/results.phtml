@@ -1,0 +1,18 @@
+<h1>Test results</h1>
+<blockquote>
+	<p>
+		Inspected file:<br/>
+		<code><?= $this->file ?></code>
+	</p>
+</blockquote>
+
+<?php foreach ($this->results as $result) : ?>
+<div class="panel panel-<?= $result['color'] ?>">
+	<div class="panel-heading">
+		<strong class="panel-title"><?= $result['title'] ?></strong>
+	</div>
+	<div class="panel-body">
+		<?= $result['content'] ?>
+	</div>
+</div>
+<?php endforeach; ?>
