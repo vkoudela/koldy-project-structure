@@ -14,8 +14,9 @@ class IndexController {
 	 * @link http://your-site.com/index/index
 	 */
 	public function indexAction() {
-		return View::create('base')
-			->with('text', 'This is your first page!');
+		return View::create('koldy-base')
+			->with('title', 'Your new site with Koldy FW! :)')
+			->with('page', 'koldy-index');
 	}
 
 
