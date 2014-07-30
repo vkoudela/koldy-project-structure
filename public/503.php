@@ -13,6 +13,10 @@ if (!isset($code)) {
 	$code = (int) substr($file, 0, strpos($file, '.'));
 }
 
+if (isset($exception) && class_exists('\Koldy\Application') && \Koldy\Application::inProduction()) {
+	$message = 'Temporary Server Error';
+}
+
 ?><!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -39,11 +43,9 @@ if (!isset($code)) {
 					<p>
 						Koldy framework gave you the error page <code>:(</code> Sorry about that.
 					</p>
-					<?php if (strlen($message) > 0) : ?>
 					<p>
 						<code><?= $message ?></code>
 					</p>
-					<?php endif; ?>
 					
 					<?php if (isset($exception) && class_exists('\Koldy\Application') && \Koldy\Application::inDevelopment()) : ?>
 						<pre class="text-danger"><?= $exception->getTraceAsString() ?></pre>
