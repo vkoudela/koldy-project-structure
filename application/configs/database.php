@@ -48,6 +48,8 @@ return array(
 	/**
 	 * The connection with backups - if first one fails, then framework will
 	 * keep trying to connect by the order defined in backup_connections until it connects
+	 * 
+	 * @link http://koldy.dev/docs/database/configuration#failover
 	 */
 	'connection-with-backups-example' => array(
 		'type' => 'mysql',
@@ -61,9 +63,11 @@ return array(
 			// if connection is not opened within 3 seconds, try using backup connection
 			PDO::ATTR_TIMEOUT => 3
 		),
+
 		'backup_connections' => array(
 			array(
 				'log_error' => false,
+				'wait_before_connect' => 500, // in miliseconds
 				'type' => 'mysql',
 				'host' => '192.168.1.3',
 				'username' => 'root',
