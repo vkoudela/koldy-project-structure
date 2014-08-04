@@ -46,6 +46,25 @@ return array(
 	'nowhere' => array(
 		'enabled' => true,
 		'driver_class' => '\Koldy\Cache\Driver\DevNull'
+	),
+
+
+	/**
+	 * If you want to cache your data into table in database, then use this cache
+	 * driver.
+	 * 
+	 * @link http://koldy.net/docs/cache/db
+	 */
+	'db' => array(
+		'enabled' => true,
+		'driver_class' => '\Koldy\Cache\Driver\Db',
+
+		'options' => array(
+			'connection' => null,
+			'table' => 'cache',
+			'default_duration' => 3600,
+			'clean_old' => (rand(1, 100) % 100 == 0) // the 1:100 probability to clean old items
+		)
 	)
 
 );
