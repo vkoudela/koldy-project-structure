@@ -243,6 +243,16 @@ return array(
 		'Validator'		=> '\\Koldy\\Validator',
 		'View'			=> '\\Koldy\\View',
 		'Where'			=> '\\Koldy\\Db\\Where'
-	)
+	),
+
+
+	/**
+	 * You custom error handler for all PHP errors, including E_ERROR (Fatal Errors)
+	 * 
+	 * @link http://php.net/manual/en/function.set-error-handler.php
+	 */
+// 	'error_handler' => function($errno, $errstr, $errfile, $errline) {
+// 		// Do something, but be careful. Remember that E_ERROR is not recoverable.
+// 	}
 
 );
