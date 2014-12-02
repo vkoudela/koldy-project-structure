@@ -87,6 +87,16 @@ return array(
 				'charset' => 'utf8'
 			)
 		)
+	),
+
+
+	/**
+	 * The connection for SQLite. You can specify any path on server's filesystem. If you want the path to be in the
+	 * storage folder of your site, then set the path with "storage:".
+	 */
+	'sqlite' => array(
+		'type' => 'sqlite',
+		'path' => 'storage:data/the-database.sqlite3'
 	)
 
 );

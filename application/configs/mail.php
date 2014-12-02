@@ -20,13 +20,24 @@
  */
 return array(
 
+	/**
+	 * This won't actually send e-mail. It'll just simulate sending by
+	 * printing log message. This is good in development environment.
+	 *
+	 * @link http://koldy.net/docs/mail/simulate
+	 */
+	'simulate' => array(
+		'enabled' => true,
+		'driver_class' => '\Koldy\Mail\Driver\Simulate'
+	),
+
 
 	/**
 	 * Driver for using internal mail() function
 	 * 
 	 * @link http://koldy.net/docs/mail/mail
 	 */
-	'default' => array(
+	'sendmail' => array(
 		'enabled' => true,
 		'driver_class' => '\Koldy\Mail\Driver\Mail'
 	),
@@ -49,18 +60,6 @@ return array(
 			'password' => null,
 			'secure' => false
 		)
-	),
-
-
-	/**
-	 * This won't acutally send e-mail. It will just simulate sending by
-	 * printing log message. This is good in development environment.
-	 * 
-	 * @link http://koldy.net/docs/mail/simulate
-	 */
-	'simulate' => array(
-		'enabled' => true,
-		'driver_class' => '\Koldy\Mail\Driver\Simulate'
 	)
 
 );

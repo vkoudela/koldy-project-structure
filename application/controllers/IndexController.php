@@ -2,6 +2,7 @@
 
 use Koldy\Application;
 use Koldy\Log;
+use Koldy\Plain;
 use Koldy\View;
 
 class IndexController {
@@ -53,16 +54,14 @@ class IndexController {
 	 * 
 	 * Feel free to adjust this as you wish.
 	 *
-	 * @return string
+	 * @return \Koldy\Plain
 	 * @link handles http://your-site.com/robots.txt
 	 */
 	public function robotsTxtAction() {
-		header('Content-type: text/plain');
-	
 		if (Application::inDevelopment()) {
-			return "User-agent: *\nDisallow: /";
+			return Plain::create("User-agent: *\nDisallow: /");
 		} else {
-			return "User-agent: *\nDisallow: ";
+			return Plain::create("User-agent: *\nDisallow: ");
 		}
 	}
 }
