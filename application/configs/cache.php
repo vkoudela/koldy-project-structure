@@ -65,6 +65,28 @@ return array(
 			'default_duration' => 3600,
 			'clean_old' => (rand(1, 100) % 100 == 0) // the 1:100 probability to clean old items
 		)
+	),
+
+
+	/**
+	 * If you want to cache your data into Memcache server, then use this cache driver.
+	 *
+	 * @link http://koldy.dev/docs/cache/memcached
+	 */
+	'memcached' => array(
+		'enabled' => true,
+		'driver_class' => '\Koldy\Cache\Driver\Memcached',
+
+		'options' => array(
+			'servers' => array( // used in addServers method: http://php.net/manual/en/memcached.addservers.php
+				array('localhost', 11211),
+				array('server2.com', 11211)
+			),
+			'persistent_id' => 'your-id',
+			'driver_options' => array(
+
+			)
+		)
 	)
 
 );
