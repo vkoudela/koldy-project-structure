@@ -32,8 +32,13 @@ return array(
 	 * @var string
 	 * @example http://cdn.your-domain.com
 	 * @example http://static.your-domain.com/assets
+	 * @link
 	 */
-	'cdn_url' => null,
+	'servers' => array(
+		//'cdn' => 'http://cdn.your-domain.com',
+		//'static' => 'http://static.your-domain.com',
+		//'other' => 'http://other.domain.com'
+	),
 
 
 	/**
@@ -138,10 +143,11 @@ return array(
 	 * the documentation for details.
 	 * 
 	 * @var array
-	 * @link http://koldy.net/docs/routes
+	 * @link http://koldy.net/docs/routes#configuration
 	 */
 	'routing_options' => array(
 		'always_restful' => false
+		// 'url_namespace' => '/public-sub-folder/my-app'
 	),
 
 
