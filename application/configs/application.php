@@ -259,6 +259,22 @@ return array(
 	 */
 // 	'error_handler' => function($errno, $errstr, $errfile, $errline) {
 // 		// Do something, but be careful. Remember that E_ERROR is not recoverable.
-// 	}
+// 	},
+
+
+	/**
+	 * If you want, other config files might be on totally different location on file system.
+	 * This is useful if you're running multiple Koldy sites and you want to share the same
+	 * configs between them.
+	 */
+	/*
+	'configs' => array(
+		'cache'     => '/path/to/some/other/configs/cache.php',
+		'database'  => '/path/to/some/other/configs/database.php',
+		'mail'      => '/path/to/some/other/configs/mail.php',
+		'session'   => '/path/to/some/other/configs/session.php',
+		'yours'     => '/home/my/configs/my-custom-config.php'
+	)
+	*/
 
 );
