@@ -81,10 +81,10 @@ class TestsController {
 		}
 
 
-		if (isset($config['cdn_url']) && substr($config['cdn_url'], -1, 1) == '/') {
-			$this->addTestResult('cdn_url', 'This mustn\'t have ending slash <code>(' . $config['cdn_url'] . ')</code>! Please remove it!', 'danger');			
+		if (isset($config['assets']) && substr($config['assets'], -1, 1) == '/') {
+			$this->addTestResult('assets', 'This mustn\'t have ending slash <code>(' . $config['assets'] . ')</code>! Please remove it!', 'danger');			
 		} else {
-			$this->addTestResult('cdn_url', 'Not set, but its ok. You should still build your links to assets with <code>Url::cdn(\'path/to/some.jpg\')</code>. <a href="http://koldy.net/docs/url#cdn" target="_blank">More info!</a>', 'success');
+			$this->addTestResult('assets', 'Not set, but its ok. You should still build your links to assets with <code>Url::asset(\'path/to/some.jpg\')</code>. <a href="http://koldy.net/docs/url#assets" target="_blank">More info!</a>', 'success');
 		}
 
 
@@ -115,7 +115,7 @@ class TestsController {
 		// @todo tests for modules
 
 		if (!isset($config['key']) || $config['key'] == '_____ENTERSomeRandomKeyHere_____') {
-			$this->addTestResult('key', 'Please change the <code>key</code>! Current value is: <code>' . $config['key'] . '</code>', 'warning');
+			$this->addTestResult('key', 'Please change the <code>key</code>! Current value is: <code>' . $config['key'] . '</code>', 'error');
 		} else {
 			$this->addTestResult('key', 'All good!', 'success');
 		}
@@ -141,7 +141,6 @@ class TestsController {
 
 		return $this->getResultsPage('Test results of application.php', $file);
 	}
-
 
 	/**
 	 * Show PHP info

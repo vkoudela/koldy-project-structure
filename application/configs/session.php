@@ -1,7 +1,7 @@
 <?php
+
 /**
- * The session configuration. As you know, you may have only one session storage
- * and it needs to be defined here.
+ * The session configuration. As you know, you may have only one session storage and it needs to be defined here.
  * 
  * @link http://koldy.net/docs/session#configuration
  */

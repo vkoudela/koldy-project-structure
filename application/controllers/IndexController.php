@@ -7,7 +7,6 @@ use Koldy\View;
 
 class IndexController {
 
-
 	/**
 	 * Handles your index page
 	 * 
@@ -20,7 +19,6 @@ class IndexController {
 			->with('page', 'koldy-index');
 	}
 
-
 	/**
 	 * Just test to see of everything is setup good. Delete this method in the future.
 	 * 
@@ -30,7 +28,6 @@ class IndexController {
 	public function testAction() {
 		return 'Test OK';
 	}
-
 
 	/**
 	 * Just test the log. Delete this method in the future.
@@ -42,7 +39,6 @@ class IndexController {
 		Log::debug('TEST from log action');
 		return 'OK';
 	}
-
 
 	/**
 	 * The robots.txt - instead of placing the robots.txt file on your server,
@@ -64,4 +60,5 @@ class IndexController {
 			return Plain::create("User-agent: *\nDisallow: ");
 		}
 	}
+
 }

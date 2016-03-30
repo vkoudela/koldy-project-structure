@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This array contains the list of database adapter settings so query can be executed
  * on any adapter you define here.
@@ -14,7 +15,6 @@
  */
 return array(
 
-
 	/**
 	 * The first connection is the default. You can get this by calling Db::getAdapter()
 	 */
@@ -27,7 +27,6 @@ return array(
 		'persistent' => true,
 		'charset' => 'utf8'
 	),
-
 
 	/**
 	 * The second connection you may use. You can get this by calling Db::getAdapter('second-connection')
@@ -43,7 +42,6 @@ return array(
 		'persistent' => false,
 		'charset' => 'utf8'
 	),
-
 
 	/**
 	 * The connection with backups - if first one fails, then framework will
@@ -67,7 +65,7 @@ return array(
 		'backup_connections' => array(
 			array(
 				'log_error' => false,
-				'wait_before_connect' => 500, // in miliseconds
+				'wait_before_connect' => 500, // in milliseconds
 				'type' => 'mysql',
 				'host' => '192.168.1.3',
 				'username' => 'root',
@@ -89,6 +87,18 @@ return array(
 		)
 	),
 
+	/**
+	 * The PostgreSQL connection settings example
+	 */
+	'postgres' => array(
+		'type' => 'postgres',
+		'host' => 'localhost',
+		'username' => 'root',
+		'password' => '',
+		'database' => 'test',
+		'persistent' => true,
+		'schema' => 'public'
+	),
 
 	/**
 	 * The connection for SQLite. You can specify any path on server's filesystem. If you want the path to be in the

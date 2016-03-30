@@ -1,6 +1,7 @@
 <?php
 
 return array(
+
 	/**
 	 * The first defined cache driver is the default one. This one will be used
 	 * if you don't specify this key when calling Cache::driver()
@@ -16,7 +17,6 @@ return array(
 			'default_duration' => 3600
 		)
 	),
-
 
 	/**
 	 * This is example of some other cache driver that will store cached files
@@ -34,7 +34,6 @@ return array(
 		)
 	),
 
-
 	/**
 	 * If you don't want to disable cache driver, but you still want to use it in
 	 * some simulations or simulated environment, then use DevNull type of driver.
@@ -47,7 +46,6 @@ return array(
 		'enabled' => true,
 		'driver_class' => '\Koldy\Cache\Driver\DevNull'
 	),
-
 
 	/**
 	 * If you want to cache your data into table in database, then use this cache
@@ -67,7 +65,6 @@ return array(
 		)
 	),
 
-
 	/**
 	 * If you want to cache your data into Memcache server, then use this cache driver.
 	 *
@@ -83,9 +80,7 @@ return array(
 				array('server2.com', 11211)
 			),
 			'persistent_id' => 'your-id',
-			'driver_options' => array(
-
-			)
+			'driver_options' => array()
 		)
 	)
 

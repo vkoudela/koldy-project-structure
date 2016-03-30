@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Config(s) for sending mails. The first block will always be default for 
  * sending mail. So, if you want to send mail using default config, use:
@@ -31,7 +32,6 @@ return array(
 		'driver_class' => '\Koldy\Mail\Driver\Simulate'
 	),
 
-
 	/**
 	 * Driver for using internal mail() function
 	 * 
@@ -41,7 +41,6 @@ return array(
 		'enabled' => true,
 		'driver_class' => '\Koldy\Mail\Driver\Mail'
 	),
-
 
 	/**
 	 * PHPMailer configuration
@@ -53,7 +52,7 @@ return array(
 		'driver_class' => '\Koldy\Mail\Driver\PHPMailer',
 
 		'options' => array(
-			'type' => 'smtp', // smtp|mail
+			'type' => 'smtp', // "smtp" or "mail"
 			'host' => 'localhost',
 			'port' => 25,
 			'username' => null,
