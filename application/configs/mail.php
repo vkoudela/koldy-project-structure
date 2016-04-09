@@ -1,8 +1,7 @@
 <?php
 
 /**
- * Config(s) for sending mails. The first block will always be default for 
- * sending mail. So, if you want to send mail using default config, use:
+ * Config(s) for sending mails. The first block will always be default for sending mail. So, if you want to send mail using default config, use:
  * 
  * 		Mail::create()
  *   		->to('your@mail.com')
@@ -22,8 +21,21 @@
 return array(
 
 	/**
-	 * This won't actually send e-mail. It'll just simulate sending by
-	 * printing log message. This is good in development environment.
+	 * This won't actually send e-mail. It'll just simulate sending by printing log message. This is good in development environment.
+	 *
+	 * @link http://koldy.net/docs/mail/file
+	 */
+	'file' => array(
+		'enabled' => true,
+		'driver_class' => '\Koldy\Mail\Driver\File',
+
+		'options' => array(
+			'location' => 'storage:email'
+		)
+	),
+
+	/**
+	 * Another development option. This won't actually send anything. It'll just simulate sending by printing log message. This is good in development environment.
 	 *
 	 * @link http://koldy.net/docs/mail/simulate
 	 */
@@ -43,7 +55,7 @@ return array(
 	),
 
 	/**
-	 * PHPMailer configuration
+	 * PHPMailer configuration example
 	 * 
 	 * @link http://koldy.net/docs/mail/phpmailer
 	 */
