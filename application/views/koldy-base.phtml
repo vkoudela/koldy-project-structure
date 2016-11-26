@@ -28,14 +28,14 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?= Url::home() ?>"><?= Request::hostNameDomain() ?></a>
+					<a class="navbar-brand" href="<?= \Koldy\Url::home() ?>"><?= \Koldy\Request::hostNameDomain() ?></a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="main-menu">
 					<ul class="nav navbar-nav">
-						<li<?= (Url::current() == Url::home() ? ' class="active"' : '') ?>><a href="<?= Url::home() ?>">Home</a></li>
-						<li<?= (Url::isController('tests') ? ' class="active"' : '') ?>><a href="<?= Url::href('tests', 'application') ?>">Configuration Tests</a></li>
-						<li><a href="<?= Url::href('tests', 'show-phpinfo') ?>">PHP Info</a></li>
+						<li<?= (\Koldy\Url::current() == \Koldy\Url::home() ? ' class="active"' : '') ?>><a href="<?= \Koldy\Url::home() ?>">Home</a></li>
+						<li<?= (\Koldy\Url::isController('tests') ? ' class="active"' : '') ?>><a href="<?= \Koldy\Url::href('tests', 'application') ?>">Configuration Tests</a></li>
+						<li><a href="<?= \Koldy\Url::href('tests', 'show-phpinfo') ?>">PHP Info</a></li>
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
@@ -49,7 +49,7 @@
 		<?= $this->render($this->page) ?>
 
 		<div class="well text-center">
-			<?= Request::hostNameDomain() ?> &copy; <?= date('Y') ?>
+			<?= \Koldy\Request::hostNameDomain() ?> &copy; <?= date('Y') ?>
 		</div>
 	</div>
 

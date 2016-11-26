@@ -54,7 +54,7 @@ class IndexController {
 	 * @link handles http://your-site.com/robots.txt
 	 */
 	public function robotsTxtAction() {
-		if (Application::inDevelopment()) {
+		if (!Application::isLive()) {
 			return Plain::create("User-agent: *\nDisallow: /");
 		} else {
 			return Plain::create("User-agent: *\nDisallow: ");

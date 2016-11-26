@@ -34,16 +34,18 @@ class TestsController {
 
 	/**
 	 * Just some shorthand
-	 * 
+	 *
 	 * @param string $title
 	 * @param string $file
+	 *
+	 * @return \Koldy\Response
 	 */
-	private function getResultsPage($title, $file) {
+	private function getResultsPage($title, $file = null) {
 		return View::create('koldy-base')
 			->with('title', $title)
 			->with('page', 'tests/base')
 			->with('subpage', 'tests/results')
-			->with('file', $file)
+			->with('file', $file = null)
 			->with('results', $this->results);
 	}
 
@@ -69,7 +71,7 @@ class TestsController {
 	 */
 	public function applicationAction() {
 		$file = Application::getApplicationPath('configs/application.php');
-		$config = require $file;
+		$config = Application::getConfig();
 
 
 		if (!isset($config['site_url'])) {
@@ -139,7 +141,7 @@ class TestsController {
 			}
 		}
 
-		return $this->getResultsPage('Test results of application.php', $file);
+		return $this->getResultsPage('Test results of main application config');
 	}
 
 	/**

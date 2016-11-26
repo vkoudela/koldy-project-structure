@@ -23,6 +23,17 @@ return array(
 
 	/**
 	 * This won't actually send e-mail. It'll just simulate sending by
+	 * writing an e-mail to file
+	 *
+	 * @link http://koldy.net/docs/mail/file
+	 */
+	'file' => array(
+		'enabled' => true,
+		'driver_class' => '\Koldy\Mail\Driver\File'
+	),
+
+	/**
+	 * This won't actually send e-mail. It'll just simulate sending by
 	 * printing log message. This is good in development environment.
 	 *
 	 * @link http://koldy.net/docs/mail/simulate
